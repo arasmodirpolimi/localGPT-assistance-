@@ -1,0 +1,14 @@
+services:
+  fastapi:
+    build:
+      context: ./app
+    ports:
+      - "8000:8000"
+
+  ui:
+    build:
+      context: ./ui
+    ports:
+      - "8501:8501"
+    depends_on:
+      - fastapi
