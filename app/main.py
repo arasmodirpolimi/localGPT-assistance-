@@ -9,7 +9,7 @@ async def chat(req: Request):
     data = await req.json()
     prompt = data.get("prompt")
     payload = {
-        "model": "ai/smollm2",
+        "model": "ai/smollm2:360M-Q4_K_M",
         "messages": [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt}
