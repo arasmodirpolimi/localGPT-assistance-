@@ -4,6 +4,7 @@ services:
       type: model
       options:
         model: ai/gemma3
+        
   fastapi:
     build:
       context: ./app

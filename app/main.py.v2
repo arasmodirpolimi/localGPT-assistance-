@@ -9,7 +9,7 @@ LLM_URL = os.environ.get("LOCAL_LLM_URL", "http://model-runner.docker.internal/e
 if not LLM_URL.endswith("/"):
     LLM_URL += "/"
 LLM_CHAT_ENDPOINT = f"{LLM_URL}chat/completions"
-LLM_MODEL = os.environ.get("LOCAL_LLM_MODEL", "ai/smollm2")
+LLM_MODEL = os.environ.get("LOCAL_LLM_MODEL", "ai/smollm2:360M-Q4_K_M")
 
 
 @app.post("/chat")
