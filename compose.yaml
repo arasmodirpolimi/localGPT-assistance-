@@ -1,4 +1,9 @@
 services:
+  local_llm:
+    provider:
+      type: model
+      options:
+        model: ai/gemma3
   fastapi:
     build:
       context: ./app
